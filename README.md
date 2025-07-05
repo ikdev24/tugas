@@ -15,11 +15,16 @@ A simple web application to manage team tasks and projects using Express.js, Mar
    ```
    _Note: Installation may fail in environments without network access._
 
-2. Configure the database connection through environment variables if needed:
+2. Copy the provided example environment file and edit it with your settings:
+   ```bash
+   cp .env.example .env
+   ```
+   The following variables are available:
    - `DB_HOST`
    - `DB_USER`
    - `DB_PASS`
    - `DB_NAME`
+   - `PORT`
 
 3. Run the application:
    ```bash
