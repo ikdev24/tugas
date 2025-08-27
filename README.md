@@ -1,6 +1,6 @@
 # Tugas
 
-A simple web application to manage team tasks and projects using Express.js, MariaDB and Pico CSS.
+A simple web application to manage team tasks and projects using Next.js, MariaDB and Pico CSS.
 
 ## Requirements
 
@@ -26,9 +26,14 @@ A simple web application to manage team tasks and projects using Express.js, Mar
    - `DB_NAME`
    - `PORT`
 
-3. Run the application:
+3. Run the development server:
    ```bash
+   npm run dev
+   ```
+   The application listens on port `3000` by default.
+
+4. Build for production:
+   ```bash
+   npm run build
    npm start
    ```
-
-The application listens on port `3000` by default.
