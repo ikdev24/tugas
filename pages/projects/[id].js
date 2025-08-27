@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { query } from '../../lib/db';
+import { Button } from '../../components/ui/button';
 
 export async function getServerSideProps({ params }) {
   const [project] = await query('SELECT id, name FROM projects WHERE id=?', [params.id]);
@@ -22,19 +23,29 @@ export default function Project({ project, tasks }) {
   }
 
   return (
-    <main className="container">
-      <h1>{project.name}</h1>
-      <ul>
+    <main className="mx-auto max-w-xl p-4">
+      <h1 className="mb-4 text-2xl font-bold">{project.name}</h1>
+      <ul className="mb-4 list-disc pl-4">
         {tasks.map((t) => (
-          <li key={t.id}>{t.title} - {t.status}</li>
+          <li key={t.id} className="mb-1">
+            {t.title} - {t.status}
+          </li>
         ))}
       </ul>
-      <form onSubmit={handleSubmit}>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="New task" required />
-        <button type="submit">Add Task</button>
+      <form onSubmit={handleSubmit} className="flex gap-2">
+        <input
+          className="flex-1 rounded border p-2"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="New task"
+          required
+        />
+        <Button type="submit">Add Task</Button>
       </form>
-      <p>
-        <Link href="/">← Back</Link>
+      <p className="mt-4">
+        <Link className="text-blue-600 underline" href="/">
+          ← Back
+        </Link>
       </p>
     </main>
   );

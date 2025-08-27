@@ -1,11 +1,12 @@
 # Tugas
 
-A simple web application to manage team tasks and projects using Next.js and MariaDB.
+A simple web application to manage team tasks and projects using Next.js, shadcn/ui components, and MariaDB.
 
 ## Requirements
 
 - Node.js
 - MariaDB server
+- Tailwind CSS setup with shadcn/ui components (installed automatically with dependencies)
 
 ## Setup
 
