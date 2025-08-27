@@ -1,6 +1,6 @@
 # Tugas
 
-A simple web application to manage team tasks and projects using Next.js, MariaDB and Pico CSS.
+A simple web application to manage team tasks and projects using Next.js and MariaDB.
 
 ## Requirements
 
